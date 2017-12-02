@@ -346,7 +346,9 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
     start_point1 = rectangle1.get_center()
     end_point1 = rectangle2.get_center()
     start_point2 = rectangle1.get_lower_left_corner()
-    end_point2 = rg.Point((end_point1.x + start_point2.x - start_point1.x), end_point1.y + start_point2.y - start_point1.y)
+    x = end_point1.x + start_point2.x - start_point1.x
+    y = end_point1.y + start_point2.y - start_point1.y
+    end_point2 = rg.Point(x, y)
     start = start_point1
     end = end_point1
     delta_x1 = start_point2.x - start_point1.x
